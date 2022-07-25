@@ -1,0 +1,25 @@
+section div.all-cards-area div.card {
+  display: inline-flex;
+  margin: 10px;
+  padding: 20px;
+  background: pink;
+  width: 200px;
+  height: 200px;
+  border-bottom: 2px solid white;
+  justify-content: center;
+  flex-direction: column;
+}
+
+section div.all-cards-area div.card h2 {
+  font-size: 2.1em;
+  padding: 0px 0px 10px 0px;
+}
+
+section div.all-cards-area div.card p:nth-child(2) {
+  font-size: 0.7em;
+  padding: 0px 0px 10px 0px;
+}
+
+section div.all-cards-area div.card p:nth-child(3) {
+  font-size: 1.5em;
+}
