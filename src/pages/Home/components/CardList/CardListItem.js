@@ -1,11 +1,13 @@
 import "./CardListItem.css";
 
 export default function CardListItem(props) {
+  const { word } = props;
+
   return (
     <div className="card">
-      <h2>你好</h2>
-      <p>nihao</p>
-      <p>Hello</p>
+      <h2>{word.ZH}</h2>
+      <p>{word.pin}</p>
+      <p>{word.EN}</p>
     </div>
   );
 }
