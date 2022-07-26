@@ -104,6 +104,13 @@ export default function StudyingPage(props) {
               NO
             </button>
           </div>
+
+          <button
+            className="basic return-home-btn transparent"
+            onClick={returnToHome}
+          >
+            Return to Home
+          </button>
         </div>
       ) : (
         <div className="finished-wrap">
