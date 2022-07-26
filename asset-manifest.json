@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/flashcards/static/css/main.0474deb7.css",
+    "main.js": "/flashcards/static/js/main.ec776a61.js",
+    "static/js/787.bc597fc4.chunk.js": "/flashcards/static/js/787.bc597fc4.chunk.js",
+    "index.html": "/flashcards/index.html",
+    "main.0474deb7.css.map": "/flashcards/static/css/main.0474deb7.css.map",
+    "main.ec776a61.js.map": "/flashcards/static/js/main.ec776a61.js.map",
+    "787.bc597fc4.chunk.js.map": "/flashcards/static/js/787.bc597fc4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0474deb7.css",
+    "static/js/main.ec776a61.js"
+  ]
+}
