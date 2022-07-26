@@ -1,13 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./FlashCard.css";
 
 export function FlashCard(props) {
   const { word } = props;
-  const [flipped, setFlipped] = useState(false);
+  const [flipped, setFlipped] = useState();
+
+  useEffect(() => {
+    setFlipped(false);
+  }, [word]);
 
   function handleClick() {
     setFlipped(!flipped);
   }
+
+  console.log("flipped card: ", flipped);
 
   return (
     <div className="flashcard-container">
@@ -20,7 +26,7 @@ export function FlashCard(props) {
           <div className="pinyin">{word.pin}</div>
         </div>
         <div className="back face">
-          <div className="EN-word">{word.EN}</div>
+          <div className="EN-word">{flipped ? word.EN : null}</div>
         </div>
       </div>
     </div>

@@ -18,6 +18,10 @@
   gap: 2rem;
 }
 
+h3 span {
+  color: #25c;
+}
+
 .rate-button-container {
   display: flex;
   column-gap: 2rem;

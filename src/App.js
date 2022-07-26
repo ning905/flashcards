@@ -23,8 +23,6 @@ function App() {
     setAllWords(updated);
   }
 
-  console.log("randomWord update: ", { ...randomWord });
-
   return (
     <>
       <Routes>

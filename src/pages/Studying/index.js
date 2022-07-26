@@ -72,7 +72,9 @@ export default function StudyingPage(props) {
     <section className="studying-section">
       {nextWord ? (
         <div className="wrap">
-          <h3>Click to see the answer</h3>
+          <h3>
+            Click to see the <span>answer</span>
+          </h3>
 
           <FlashCard word={wordOnPage} />
 
