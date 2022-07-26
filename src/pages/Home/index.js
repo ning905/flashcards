@@ -1,14 +1,16 @@
+import { useEffect, useState } from "react";
 import CardList from "./components/CardList/CardList";
 import Header from "./components/Header/Header";
 import StartButton from "./components/StartButton/StartButton";
 
 export default function HomePage(props) {
-  const { vocabulary } = props;
+  const { allWords } = props;
+
   return (
     <>
       <Header />
-      <StartButton vocabulary={vocabulary} />
-      <CardList vocabulary={vocabulary} />
+      <StartButton />
+      <CardList allWords={allWords} />
     </>
   );
 }

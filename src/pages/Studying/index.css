@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+
+.studying-section {
+  font-family: Ubuntu;
+  font-size: 1.4rem;
+  color: #333;
+
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrap {
+  display: grid;
+  place-items: center;
+
+  gap: 2rem;
+}
+
+.rate-button-container {
+  display: flex;
+  column-gap: 2rem;
+}
+
+button.yes {
+  background-color: rgb(107, 203, 119);
+  border-color: rgba(34, 194, 141, 0.785);
+}
+
+button.yes:hover {
+  box-shadow: 0 5px 5px -5px rgba(107, 203, 119, 0.15),
+    0 10px 10px -5px rgba(107, 203, 119, 0.15),
+    0 15px 15px -5px rgba(107, 203, 119, 0.15),
+    0 20px 20px -5px rgba(107, 203, 119, 0.15);
+}
+
+button.not-sure {
+  background-color: rgb(255, 217, 61);
+  border-color: rgba(241, 196, 14, 0.89);
+}
+
+button.not-sure:hover {
+  box-shadow: 0 5px 5px -5px rgba(255, 217, 61, 0.15),
+    0 10px 10px -5px rgba(255, 217, 61, 0.15),
+    0 15px 15px -5px rgba(255, 217, 61, 0.15);
+}
+
+button.hard {
+  background-color: rgb(255, 107, 107);
+  border-color: rgba(236, 12, 12, 0.27);
+}
+
+button.hard:hover {
+  box-shadow: 0 5px 5px -5px rgba(255, 107, 107, 0.15),
+    0 10px 10px -5px rgba(255, 107, 107, 0.15),
+    0 15px 15px -5px rgba(255, 107, 107, 0.15),
+    0 20px 20px -5px rgba(255, 107, 107, 0.15);
+}
+
+.finished-wrap {
+  display: grid;
+  place-items: center;
+  gap: 2rem;
+}
+
+.finished-text-wrap {
+  border-top: 5px solid #f60;
+  background-color: white;
+  border-radius: 0.3rem;
+  line-height: 3rem;
+  box-shadow: 5px 10px 10px 1px #c3c3c3;
+  padding: 3rem 4.5rem;
+}
+
+.finished-text-wrap > * {
+  margin: 1rem 0;
+}
+
+.finished-button-wrap > button {
+  margin: 1rem;
+  width: 11rem;
+}
+
+button.return-home-btn {
+  background-color: rgba(255, 102, 0, 0.806);
+}

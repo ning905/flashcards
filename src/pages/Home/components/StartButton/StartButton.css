@@ -1,19 +1,5 @@
 .start-button-container {
-    text-align: center;
-    padding: 15px 0px 15px 0px;
-    margin-bottom: 0px
+  text-align: center;
+  padding: 15px 0px 15px 0px;
+  margin-bottom: 0px;
 }
-
-.start-button{
-    padding: 1rem;
-
-    border: 3px solid pink;
-    border-radius: 1rem;
-
-    font-size: 1.2rem;
-
-    color: white;
-    background-color: rgba(244, 76, 104, 0.965)
-    
-}
-

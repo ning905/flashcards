@@ -1,16 +1,26 @@
+import { useState } from "react";
 import "./FlashCard.css";
 
 export function FlashCard(props) {
+  const { word } = props;
+  const [flipped, setFlipped] = useState(false);
+
+  function handleClick() {
+    setFlipped(!flipped);
+  }
+
   return (
-    <div class="flashcard">
-      <div class="front-face">
-        <div class="ZH-word">見る</div>
-      </div>
-      <div class="back-face">
-        <div class="pinyin">みる</div>
-        <div class="EN-word">to see</div>
-        <div class="sentence">
-          赤い猫を<span>見る</span>
+    <div className="flashcard-container">
+      <div
+        className={`flashcard ${flipped ? "flip" : null}`}
+        onClick={handleClick}
+      >
+        <div className="front face">
+          <div className="ZH-word">{word.ZH}</div>
+          <div className="pinyin">{word.pin}</div>
+        </div>
+        <div className="back face">
+          <div className="EN-word">{word.EN}</div>
         </div>
       </div>
     </div>
