@@ -11,7 +11,7 @@ export default function StartButton() {
   return (
     <div className="start-button-container">
       <button className="start-button basic" onClick={handleClick}>
-        Start study
+        Start review
       </button>
     </div>
   );
