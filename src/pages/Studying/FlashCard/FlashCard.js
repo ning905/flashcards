@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./FlashCard.css";
+import "pages/Studying/FlashCard/FlashCard.css";
 
 export function FlashCard(props) {
   const { word } = props;

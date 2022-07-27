@@ -4,7 +4,7 @@ import StudyingPage from "./pages/Studying";
 import HomePage from "./pages/Home";
 import { vocabulary } from "./vocabulary";
 import { useEffect, useState } from "react";
-import getRandomWord from "./functions/getRandomWord";
+import getRandomWord from "functions/getRandomWord";
 
 function App() {
   const [allWords, setAllWords] = useState(vocabulary);

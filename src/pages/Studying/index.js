@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { FlashCard } from "./FlashCard/FlashCard";
-import getRandomWord from "../../functions/getRandomWord";
-import "./index.css";
+import { FlashCard } from "pages/Studying/FlashCard/FlashCard";
+import getRandomWord from "functions/getRandomWord";
+import "pages/Studying/index.css";
 import { useNavigate } from "react-router-dom";
 
 export default function StudyingPage(props) {
