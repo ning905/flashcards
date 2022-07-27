@@ -1,6 +1,6 @@
-import CardList from "pages/Home/components/CardList/CardList";
-import Header from "pages/Home//components/Header/Header";
-import StartButton from "pages/Home//components/StartButton/StartButton";
+import CardList from "./components/CardList/CardList";
+import Header from "./components/Header/Header";
+import StartButton from "./components/StartButton/StartButton";
 
 export default function HomePage(props) {
   const { allWords } = props;
