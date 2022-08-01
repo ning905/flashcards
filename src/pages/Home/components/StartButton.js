@@ -1,17 +1,17 @@
-import { Link, useNavigate } from "react-router-dom";
-import "./StartButton.css";
+import { useNavigate } from "react-router-dom";
+import { Paths, UIText } from "../../../utils";
 
 export default function StartButton() {
   const navigate = useNavigate();
 
-  function handleClick(e) {
-    navigate("/studying");
+  function handleClick() {
+    navigate(Paths.study);
   }
 
   return (
     <div className="start-button-container">
       <button className="start-button basic" onClick={handleClick}>
-        Start review
+        {UIText.startButton}
       </button>
     </div>
   );

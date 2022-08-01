@@ -1,0 +1,17 @@
+@import "./CardListItem.css";
+
+header .title {
+  text-align: center;
+  padding: 25px 0px 25px 0px;
+  margin-bottom: 0px;
+}
+
+.start-button-container {
+  text-align: center;
+  padding: 15px 0px 15px 0px;
+  margin-bottom: 0px;
+}
+
+main .all-cards-area {
+  text-align: center;
+}

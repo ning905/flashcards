@@ -1,5 +1,3 @@
-import "./CardListItem.css";
-
 export default function CardListItem(props) {
   const { word } = props;
 

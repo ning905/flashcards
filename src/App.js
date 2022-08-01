@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
 import StudyingPage from "./pages/Studying";
 import HomePage from "./pages/Home";
-import { vocabulary } from "./vocabulary";
+import { vocabulary } from "./utils/vocabulary";
 import { useEffect, useState } from "react";
-import getRandomWord from "./functions/getRandomWord";
+import { getRandomWord, updateById } from "./functions";
+import { Paths } from "./utils";
 
 function App() {
   const [allWords, setAllWords] = useState(vocabulary);
@@ -17,18 +17,16 @@ function App() {
   }, []);
 
   function updateWordRating(wordWithRate) {
-    const updated = allWords.map((word) =>
-      word.id === wordWithRate.id ? wordWithRate : word
-    );
+    const updated = updateById(wordWithRate, allWords);
     setAllWords(updated);
   }
 
   return (
     <>
       <Routes>
-        <Route path="/" element={<HomePage allWords={allWords} />} />
+        <Route path={Paths.home} element={<HomePage allWords={allWords} />} />
         <Route
-          path="/Studying"
+          path={Paths.study}
           element={
             <StudyingPage
               allWords={allWords}

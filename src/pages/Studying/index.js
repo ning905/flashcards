@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
-import { FlashCard } from "./FlashCard/FlashCard";
-import getRandomWord from "../../functions/getRandomWord";
-import "./index.css";
 import { useNavigate } from "react-router-dom";
+import { FlashCard } from "./Components/FlashCard";
+import { filterOutById, getRandomWord, updateById } from "../../functions";
+import { Paths, UIText } from "../../utils";
 
 export default function StudyingPage(props) {
   // Props
   const { allWords, thisWord, updateWordRating } = props;
-  // const nextRandom = getRandomWord(available);
 
   // States & Hooks
   const [wordOnPage, setWordOnPage] = useState(thisWord);
@@ -17,7 +16,7 @@ export default function StudyingPage(props) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    let available = availableWords.filter((word) => word.id !== wordOnPage.id);
+    let available = filterOutById(wordOnPage, availableWords);
     if (availableWords.length === 1) {
       available = [...availableWords];
     }
@@ -27,15 +26,13 @@ export default function StudyingPage(props) {
 
   // Button functions
   function updateAvailableWords(rated) {
+    let updated;
     if (rated.rating === "easy") {
-      const updated = availableWords.filter((word) => word.id !== rated.id);
-      setAvailableWords(updated);
+      updated = filterOutById(rated, availableWords);
     } else {
-      const updated = availableWords.map((word) =>
-        word.id === rated.id ? rated : word
-      );
-      setAvailableWords(updated);
+      updated = updateById(rated, availableWords);
     }
+    setAvailableWords(updated);
   }
 
   function handleSubmit(event) {
@@ -50,16 +47,12 @@ export default function StudyingPage(props) {
   }
 
   function returnToHome() {
-    navigate("/");
-  }
-
-  function reset() {
-    setWordOnPage(thisWord);
-    setAvailableWords(allWords);
+    navigate(Paths.home);
   }
 
   function restart() {
-    reset();
+    setWordOnPage(thisWord);
+    setAvailableWords(allWords);
   }
 
   // console.log("allWords", allWords);
@@ -73,12 +66,13 @@ export default function StudyingPage(props) {
       {nextWord ? (
         <div className="wrap">
           <h3>
-            Click to see the <span>answer</span>
+            {UIText.cardClickSeeAnswer}{" "}
+            <span>{UIText.cardClickSeeAnswerHighlight}</span>
           </h3>
 
           <FlashCard word={wordOnPage} />
 
-          <p>Did you get the answer?</p>
+          <p>{UIText.cardConfirmGetAnswer}</p>
 
           <div className="rate-button-container">
             <button
@@ -87,7 +81,7 @@ export default function StudyingPage(props) {
               className="rate-button yes"
               onClick={handleSubmit}
             >
-              YES
+              {UIText.rateButtonYes}
             </button>
             <button
               type="submit"
@@ -95,7 +89,7 @@ export default function StudyingPage(props) {
               className="rate-button not-sure"
               onClick={handleSubmit}
             >
-              Not sure
+              {UIText.rateButtonNotSure}
             </button>
             <button
               type="submit"
@@ -103,7 +97,7 @@ export default function StudyingPage(props) {
               className="rate-button hard"
               onClick={handleSubmit}
             >
-              NO
+              {UIText.rateButtonNo}
             </button>
           </div>
 
@@ -111,21 +105,21 @@ export default function StudyingPage(props) {
             className="basic return-home-btn transparent"
             onClick={returnToHome}
           >
-            Return to Home
+            {UIText.returnToHome}
           </button>
         </div>
       ) : (
         <div className="finished-wrap">
           <div className="finished-text-wrap">
-            <h2>Congratulations!</h2>
-            <p>You finished all the words!</p>
+            <h2>{UIText.congrats}</h2>
+            <p>{UIText.studyFinish}</p>
           </div>
           <div className="finished-button-wrap">
             <button className="basic return-home-btn" onClick={returnToHome}>
-              Return to Home
+              {UIText.returnToHome}
             </button>
             <button className="basic" onClick={restart}>
-              Another round
+              {UIText.anotherRound}
             </button>
           </div>
         </div>

@@ -1,3 +1,4 @@
+@import "./FlashCard.css";
 @import url("https://fonts.googleapis.com/css?family=Ubuntu");
 
 .studying-section {
@@ -11,14 +12,14 @@
   height: 100vh;
 }
 
-.wrap {
+.studying-section .wrap {
   display: grid;
   place-items: center;
 
   gap: 2rem;
 }
 
-h3 span {
+.studying-section h3 span {
   color: #25c;
 }
 
@@ -27,48 +28,48 @@ h3 span {
   column-gap: 2rem;
 }
 
-button.yes {
+.rate-button.yes {
   background-color: rgb(107, 203, 119);
   border-color: rgba(34, 194, 141, 0.785);
 }
 
-button.yes:hover {
+.rate-button.yes:hover {
   box-shadow: 0 5px 5px -5px rgba(107, 203, 119, 0.15),
     0 10px 10px -5px rgba(107, 203, 119, 0.15),
     0 15px 15px -5px rgba(107, 203, 119, 0.15),
     0 20px 20px -5px rgba(107, 203, 119, 0.15);
 }
 
-button.not-sure {
+.rate-button.not-sure {
   background-color: rgb(255, 217, 61);
   border-color: rgba(241, 196, 14, 0.89);
 }
 
-button.not-sure:hover {
+.rate-button.not-sure:hover {
   box-shadow: 0 5px 5px -5px rgba(255, 217, 61, 0.15),
     0 10px 10px -5px rgba(255, 217, 61, 0.15),
     0 15px 15px -5px rgba(255, 217, 61, 0.15);
 }
 
-button.hard {
+.rate-button.hard {
   background-color: rgb(255, 107, 107);
   border-color: rgba(236, 12, 12, 0.27);
 }
 
-button.hard:hover {
+.rate-button.hard:hover {
   box-shadow: 0 5px 5px -5px rgba(255, 107, 107, 0.15),
     0 10px 10px -5px rgba(255, 107, 107, 0.15),
     0 15px 15px -5px rgba(255, 107, 107, 0.15),
     0 20px 20px -5px rgba(255, 107, 107, 0.15);
 }
 
-.finished-wrap {
+.studying-section .finished-wrap {
   display: grid;
   place-items: center;
   gap: 2rem;
 }
 
-.finished-text-wrap {
+.studying-section .finished-text-wrap {
   border-top: 5px solid #f60;
   background-color: white;
   border-radius: 0.3rem;
@@ -77,11 +78,11 @@ button.hard:hover {
   padding: 3rem 4.5rem;
 }
 
-.finished-text-wrap > * {
+.studying-section .finished-text-wrap > * {
   margin: 1rem 0;
 }
 
-.finished-button-wrap > button {
+.studying-section .finished-button-wrap > button {
   margin: 1rem;
   width: 11rem;
 }

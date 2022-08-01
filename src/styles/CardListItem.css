@@ -1,4 +1,4 @@
-section div.all-cards-area div.card {
+main .all-cards-area .card {
   display: inline-flex;
   margin: 10px;
   padding: 20px;
@@ -10,16 +10,16 @@ section div.all-cards-area div.card {
   flex-direction: column;
 }
 
-section div.all-cards-area div.card h2 {
+main .all-cards-area .card h2 {
   font-size: 2.1em;
   padding: 0px 0px 10px 0px;
 }
 
-section div.all-cards-area div.card p:nth-child(2) {
+main .all-cards-area .card p:nth-child(2) {
   font-size: 0.7em;
   padding: 0px 0px 10px 0px;
 }
 
-section div.all-cards-area div.card p:nth-child(3) {
+main .all-cards-area .card p:nth-child(3) {
   font-size: 1.5em;
 }

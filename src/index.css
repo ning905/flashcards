@@ -1,3 +1,7 @@
+@import "./styles/basic-buttons.css";
+@import "./styles/homepage.css";
+@import "./styles/studying-section.css";
+
 @import url("https://fonts.googleapis.com/css?family=Lato|Nunito");
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans");
 html,
@@ -13,29 +17,4 @@ body {
   font-size: 1rem;
   background-color: #fae6f2;
   background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
-}
-
-button {
-  padding: 1rem;
-  border: 3px solid;
-  border-radius: 1rem;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-button:hover {
-  transform: translateY(-6px);
-}
-
-button.basic {
-  border-color: pink;
-  color: white;
-  background-color: rgba(244, 76, 104, 0.965);
-}
-
-button.basic:hover {
-  box-shadow: 0 5px 5px -5px rgba(244, 76, 104, 0.15),
-    0 10px 10px -5px rgba(244, 76, 104, 0.15),
-    0 15px 15px -5px rgba(244, 76, 104, 0.15),
-    0 20px 20px -5px rgba(244, 76, 104, 0.15);
 }
