@@ -33,11 +33,11 @@
 
   background: white;
   border-radius: 0.3rem;
-  box-shadow: 5px 10px 10px 1px #c3c3c3;
+  box-shadow: 5px 10px 10px 1px rgb(195, 195, 195);
 }
 
 .flashcard .face.front {
-  border-top: 5px solid #f60;
+  border-top: 5px solid rgb(255, 102, 0);
 }
 
 .flashcard .face.front > * {
@@ -45,7 +45,7 @@
 }
 
 .flashcard .face.back {
-  border-top: 5px solid #25c;
+  border-top: 5px solid rgb(34, 85, 204);
   transform: rotateY(180deg);
 }
 

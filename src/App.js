@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-import StudyingPage from "./pages/Studying";
-import HomePage from "./pages/Home";
+import HomePage from "./pages/home";
+import StudyingPage from "./pages/studying";
+import FlashCardPage from "./pages/studying-flip-card";
 import { vocabulary } from "./utils/vocabulary";
 import { useEffect, useState } from "react";
 import { getRandomWord, updateById } from "./functions";
@@ -26,15 +27,16 @@ function App() {
       <Routes>
         <Route path={Paths.home} element={<HomePage allWords={allWords} />} />
         <Route
-          path={Paths.study}
+          path={Paths.studyFlipCard}
           element={
-            <StudyingPage
+            <FlashCardPage
               allWords={allWords}
               thisWord={randomWord}
               updateWordRating={updateWordRating}
             />
           }
         />
+        <Route path={Paths.study} element={<StudyingPage />} />
       </Routes>
     </>
   );

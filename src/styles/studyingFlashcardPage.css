@@ -1,7 +1,7 @@
 @import "./FlashCard.css";
 @import url("https://fonts.googleapis.com/css?family=Ubuntu");
 
-.studying-section {
+.flashcard-studying-section {
   font-family: Ubuntu;
   font-size: 1.4rem;
   color: #333;
@@ -12,15 +12,15 @@
   height: 100vh;
 }
 
-.studying-section .wrap {
+.flashcard-studying-section .wrap {
   display: grid;
   place-items: center;
 
   gap: 2rem;
 }
 
-.studying-section h3 span {
-  color: #25c;
+.flashcard-studying-section h3 span {
+  color: rgb(34, 85, 204);
 }
 
 .rate-button-container {
@@ -63,13 +63,13 @@
     0 20px 20px -5px rgba(255, 107, 107, 0.15);
 }
 
-.studying-section .finished-wrap {
+.flashcard-studying-section .finished-wrap {
   display: grid;
   place-items: center;
   gap: 2rem;
 }
 
-.studying-section .finished-text-wrap {
+.flashcard-studying-section .finished-text-wrap {
   border-top: 5px solid #f60;
   background-color: white;
   border-radius: 0.3rem;
@@ -78,11 +78,11 @@
   padding: 3rem 4.5rem;
 }
 
-.studying-section .finished-text-wrap > * {
+.flashcard-studying-section .finished-text-wrap > * {
   margin: 1rem 0;
 }
 
-.studying-section .finished-button-wrap > button {
+.flashcard-studying-section .finished-button-wrap > button {
   margin: 1rem;
   width: 11rem;
 }

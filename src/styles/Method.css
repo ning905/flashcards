@@ -1,0 +1,40 @@
+.study-method {
+  width: fit-content;
+
+  display: grid;
+  place-items: center;
+}
+
+.study-method .img-container {
+  border: 4px solid rgba(246, 119, 140, 0.3);
+  border-radius: 1rem;
+
+  cursor: pointer;
+
+  transition: 100ms;
+}
+
+.study-method .img-container:hover {
+  border-color: rgba(246, 119, 140, 0.5);
+
+  box-shadow: 0 5px 5px -5px rgba(246, 119, 140, 0.15),
+    0 10px 10px -5px rgba(246, 119, 140, 0.15),
+    0 15px 15px -5px rgba(246, 119, 140, 0.15),
+    0 20px 20px -5px rgba(246, 119, 140, 0.15);
+}
+
+.study-method .img-container img {
+  width: 17rem;
+  border-radius: 1rem;
+}
+
+.study-method h2 {
+  display: none;
+}
+
+.study-method .img-container:hover ~ h2 {
+  display: block;
+  color: rgb(222, 76, 98);
+  margin-top: 1.5rem;
+  font-size: 1.8rem;
+}
